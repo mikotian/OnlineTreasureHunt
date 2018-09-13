@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    div#game.header.container
+        div.row
+            div.page-header.col-sm-10
+                h1 Infusion 2018
+                p.lead Online Treasure Hunt. Welcome #{firstName}!
+            div.col-sm-1
+                include about.pug
+                a(data-toggle="modal" data-target="#exampleModalCenter")
+                    i.fa.fa-info(style="font-size:48px;color:dodgerblue") 
+            div.col-sm-1
+                a(href='/auth/logout' align='right' data-toggle='tooltip' title='Logout')
+                    i.fa.fa-sign-out(style="font-size:48px;color:dodgerblue")
+    hr
+    div.row
+        include links.pug
+        div#leader.container.col-sm-7
+            -obj=leader
+            h3 LeaderBoard
+            table.obj(class="table table-striped table-bordered",id="mytab")
+                tr#headtag
+                th Name
+                th Score
+                th Team
+                each o in obj
+                    tr
+                        td= o.firstName+" "+o.lastName
+                        td= o.score
+                        td= o.teamid
+
+        include info.pug

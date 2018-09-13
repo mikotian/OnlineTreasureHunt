@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    div#game.header.container
+        div.row
+            div.page-header.col-sm-10
+                h1 Infusion 2018
+                p.lead Online Treasure Hunt. Welcome #{firstName}!
+            div.col-sm-1
+                include about.pug
+                a(data-toggle="modal" data-target="#exampleModalCenter")
+                    i.fa.fa-info(style="font-size:48px;color:dodgerblue") 
+            div.col-sm-1
+                a(href='/auth/logout' align='right' data-toggle='tooltip' title='Logout')
+                    i.fa.fa-sign-out(style="font-size:48px;color:dodgerblue")
+    hr
+    div.row
+        include links.pug
+        div#koschan.container.col-sm-7
+            form(method='POST' action='/auth/update')
+                -userinfo=user
+                div.form-group
+                        if message.error
+                            div.alert.alert-danger #{message.error}
+                        
+                        else 
+                            if message.success
+                                div.alert.alert-success #{message.success}
+                        
+                        label Name:
+                        input.form-control(id='fname' type='text' name='fname' value=user.firstName disabled)
+                        input.form-control(id='lname' type='text' name='lname' value=user.lastName disabled)
+                        br    
+                        label Email:
+                        input.form-control.col-xs-2(id='email' type='email' name='email' value=user.email disabled)
+                        label Location:
+                        input.form-control.col-xs-2(id='location' type='text' name='location' value=user.locationid disabled)
+                        label Team:
+                        input.form-control.col-xs-2(id='team' type='email' name='team' value=user.teamid disabled)
+                        label Level:
+                        input.form-control.col-xs-2(id='level' type='email' name='level' value=user.level disabled)
+                        label Password:
+                        input.form-control.col-xs-2(id='pwd' type='text' name='pwd')
+                br
+                input.btn.btn-outline-dark(type='submit' value='Update')
+
+        include info.pug

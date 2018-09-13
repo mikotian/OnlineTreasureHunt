@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    div#game.header.container
+        div.row
+            div.page-header.col-sm-10
+                h1 Game Page
+                p.lead Online Treasure Hunt. Welcome Hunter!
+            div.col-sm-1
+                include about.pug
+                a(data-toggle="modal" data-target="#exampleModalCenter")
+                    i.fa.fa-info(style="font-size:48px;color:dodgerblue") 
+            div.col-sm-1
+                a(href='/auth/logout' align='right' data-toggle='tooltip' title='Logout')
+                    i.fa.fa-sign-out(style="font-size:48px;color:dodgerblue")
+            
+    hr
+    div.row
+        include links.pug
+        div#koschan.container.col-sm-7
+            h2 You have completed the hunt!!
+            img(src='/images/tenor.gif' style="vertical-align:middle")
+        include info.pug

@@ -1,0 +1,33 @@
+{
+  "name": "othv2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt-cli": "^1.1.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "~1.18.2",
+    "compression": "^1.7.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "flash": "^1.1.0",
+    "knex": "^0.14.4",
+    "morgan": "~1.9.0",
+    "node-gyp": "^3.6.2",
+    "nodemon": "^1.17.2",
+    "objection": "^1.0.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pm2": "^2.10.2",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5",
+    "sqlite3": "^4.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.icon-bar {
+    width: 90px; /* Set a specific width */
+    background-color: white; /* Dark-grey background */
+}
+
+    .icon-bar a {
+        display: block; /* Make the links appear below each other instead of side-by-side */
+        text-align: center; /* Center-align text */
+        padding: 16px; /* Add some padding */
+        margin: 36px auto;
+        transition: all 0.3s ease; /* Add transition for hover effects */
+        color: dodgerblue; /* White text color */
+        font-size: 48px; /* Increased font-size */
+    }
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.active {
+    background-color: #d1d1d1; /* Add an active/current color */
+}

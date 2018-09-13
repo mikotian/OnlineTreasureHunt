@@ -1,0 +1,18 @@
+koschan
+
+id, ques, imgloc, points, locationid, lastans
+
+jawaab
+
+id,ans
+
+users
+
+email, passw, fname, lname, locationid, score, currlev, teamid, admin
+
+teams
+
+teamid, locationid, logo
+
+
+====================

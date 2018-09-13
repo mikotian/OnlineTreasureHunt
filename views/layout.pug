@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      title Infusion 2018 Game Page
+      link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+      link(href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet')
+      link(href='/stylesheets/style.css', rel='stylesheet')
+      script(src='/javascripts/jquery-3.3.1.min.js')
+      script(src='/javascripts/bootstrap.min.js')
+
+  body
+    block scripts
+    block body
+      block content
+    //[if IE 6]>
+      h3.bad Shit, your browser too old. Please update it.
+      <![endif]
+    br
